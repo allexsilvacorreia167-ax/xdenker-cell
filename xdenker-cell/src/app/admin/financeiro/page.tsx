@@ -222,7 +222,7 @@ export default function FinanceiroPage() {
                                                 <YAxis stroke="#64748b" fontSize={10} width={40} />
                                                 <Tooltip
                                                     contentStyle={{ background: "#0f172a", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 12 }}
-                                                    formatter={(value: number | string) => formatPrice(Number(value))}
+                                                    formatter={(value: any) => formatPrice(Number(value))}
                                                 />
                                                 <Line type="monotone" dataKey="revenue" stroke="#22d3ee" strokeWidth={2} dot={{ r: 3 }} />
                                             </LineChart>
@@ -248,7 +248,7 @@ export default function FinanceiroPage() {
                                                 <YAxis stroke="#64748b" fontSize={10} width={40} />
                                                 <Tooltip
                                                     contentStyle={{ background: "#0f172a", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 12 }}
-                                                    formatter={(value: number | string) => formatPrice(Number(value))}
+                                                    formatter={(value: any) => formatPrice(Number(value))}
                                                 />
                                                 <Bar dataKey="margin" fill="#3b82f6" radius={[4, 4, 0, 0]} />
                                             </BarChart>

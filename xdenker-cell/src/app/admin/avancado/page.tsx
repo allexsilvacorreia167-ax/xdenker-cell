@@ -146,7 +146,7 @@ export default function AvancadoPage() {
                 ) : (
                     <>
                         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-                            {kpis.map((k) => (
+                            {kpis.map((k: any) => (
                                 <div key={k.label} className="glass rounded-2xl p-5">
                                     <div className="text-xs text-gray-400 mb-2">{k.label}</div>
                                     <div className="text-xl font-bold text-white mb-2">{k.value}</div>
@@ -174,7 +174,7 @@ export default function AvancadoPage() {
                                         <YAxis stroke="#64748b" fontSize={10} width={50} />
                                         <Tooltip
                                             contentStyle={{ background: "#0f172a", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 12 }}
-                                            formatter={(value: number | string) => formatPrice(Number(value))}
+                                            formatter={(value: any) => formatPrice(Number(value))}
                                         />
                                         <Area type="monotone" dataKey="value" stroke="#3b82f6" strokeWidth={2} fill="url(#projGradient)" />
                                     </AreaChart>
