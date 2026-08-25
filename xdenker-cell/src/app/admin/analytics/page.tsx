@@ -91,7 +91,7 @@ export default function AdminAnalyticsPage() {
                                             <YAxis stroke="#64748b" fontSize={10} width={50} />
                                             <Tooltip
                                                 contentStyle={{ background: "#0f172a", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 12 }}
-                                                formatter={(value) => formatPrice(Number(value) || 0)}
+                                                formatter={(value) => formatPrice(Number(value))}
                                             />
                                             <Area type="monotone" dataKey="total" stroke="#22d3ee" strokeWidth={2} fill="url(#revGradient)" />
                                         </AreaChart>
