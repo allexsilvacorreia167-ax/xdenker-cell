@@ -4,8 +4,33 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://cell.xdenker.com.br"),
   title: "XDENKER CELL | Tecnologia de Ponta",
-  description: "Loja de celulares, computadores, acessórios e PCs gamer. XDENKER CELL.",
+  description: "Celulares, computadores e acessórios com os melhores preços de Fortaleza. iPhone, Android, MacBook, PC Gamer e muito mais.",
+  icons: {
+    icon: "/favicon.ico",
+  },
+  openGraph: {
+    title: "XDENKER CELL | Tecnologia de Ponta",
+    description: "Celulares, computadores e acessórios com os melhores preços de Fortaleza.",
+    url: "https://cell.xdenker.com.br",
+    siteName: "XDENKER CELL",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "pt_BR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "XDENKER CELL | Tecnologia de Ponta",
+    description: "Celulares, computadores e acessórios com os melhores preços de Fortaleza.",
+    images: ["/opengraph-image.png"],
+  },
 };
 
 export default function RootLayout({
