@@ -1,12 +1,22 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
 const OWNER_EMAIL = "allexsilvacorreia167@gmail.com";
 const RESTRICTED_PASSWORD = "Axsilva167adm";
 
 export async function POST(req: Request) {
     try {
+        const apiKey = process.env.RESEND_API_KEY;
+
+        if (!apiKey) {
+            return NextResponse.json(
+                { error: "Serviço de e-mail não configurado" },
+                { status: 500 }
+            );
+        }
+
+        const resend = new Resend(apiKey);
+
         const body = await req.json();
         const email = body?.email;
 
